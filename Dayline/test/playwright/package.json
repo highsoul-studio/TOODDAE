@@ -1,0 +1,16 @@
+{
+  "name": "dayline-e2e",
+  "private": true,
+  "type": "module",
+  "description": "Dayline の画面テスト (Playwright)。アプリ本体は依存 0 のまま、ここだけに開発用の依存を置く。",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.1"
+  }
+}

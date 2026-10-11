@@ -1,0 +1,5 @@
+node_modules/
+test/playwright/test-results/
+test/playwright/playwright-report/
+server.log
+.DS_Store

@@ -1,0 +1,18 @@
+# Personal data and machine state are never source artifacts.
+/runtime/
+/default/
+/evidence/
+/publish/
+/TOODDAE.app/
+**/node_modules/
+**/node_modules
+**/test-results/
+**/playwright-report/
+**/server.log
+**/.DS_Store
+**/.env
+**/.env.*
+**/secrets.json
+**/subscriptions.json
+**/consents.json
+**/runtime.json

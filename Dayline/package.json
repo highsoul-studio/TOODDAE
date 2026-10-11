@@ -1,0 +1,27 @@
+{
+  "name": "tooddae",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Obsidian vault の日次タスク/ルーティンをローカルで見る・操作するダッシュボード",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test test/*.test.js",
+    "service:install": "node scripts/service.mjs install",
+    "service:uninstall": "node scripts/service.mjs uninstall",
+    "service:status": "node scripts/service.mjs status",
+    "e2e": "node test/playwright/node_modules/playwright/cli.js test --config=test/playwright/playwright.config.js",
+    "e2e:install": "cd test/playwright && npm install --ignore-scripts && npx playwright install chromium firefox webkit",
+    "e2e:lint": "node test/playwright/lint.mjs",
+    "e2e:report": "node test/playwright/node_modules/playwright/cli.js show-report test/playwright/playwright-report",
+    "e2e:mutate": "node test/playwright/tools/mutate.mjs",
+    "verify:real": "node test/playwright/tools/real-readonly.mjs",
+    "palettes": "node scripts/palettes.mjs",
+    "app:package": "node scripts/package-macos.mjs",
+    "app:open": "node scripts/launch.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

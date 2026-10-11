@@ -1,0 +1,527 @@
+{
+  "version": "1.2.0",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9170,
+      "sha256": "10a4c2131b362813417da13b76b62e47ff3a408c0716416660983a5c99f7bd24"
+    },
+    {
+      "path": "index.html",
+      "bytes": 14260,
+      "sha256": "2fd1651bfbd316df92546b773c14e36ca4d57a5d7f6c854bbf3aeafe2287c3f6"
+    },
+    {
+      "path": "layers/body-charcoal.png",
+      "bytes": 279708,
+      "sha256": "35c49a788b1cbd5647b6686b8342a22bedc36aa904360766f4f9a9749a446c3c"
+    },
+    {
+      "path": "layers/body-mask.png",
+      "bytes": 53395,
+      "sha256": "381b6fed91384b5624fb82515c0de4dacf14c5f9cef288ec81a323b89327c541"
+    },
+    {
+      "path": "layers/body-sky-blue.png",
+      "bytes": 261827,
+      "sha256": "00335bea03932a3bf71f636afd271eadc33b59ee35342dd84c20510fcd2d9d02"
+    },
+    {
+      "path": "layers/eyes-default.png",
+      "bytes": 13401,
+      "sha256": "4f09e40f1f454a6aead45c3ab1b69cc4b32867efc35a1215682f3025af6da41a"
+    },
+    {
+      "path": "layers/eyes-notice.png",
+      "bytes": 13400,
+      "sha256": "fd4f48a7fa975ed9e109be364da94f271c90209a6bbe000908ed5bd2fce55ed5"
+    },
+    {
+      "path": "layers/eyes-question.png",
+      "bytes": 13403,
+      "sha256": "4ce05a56e270042c4180f251ddf6d5eb8212c48467520d62fd7fff8a3f219476"
+    },
+    {
+      "path": "layers/eyes-sleep.png",
+      "bytes": 6015,
+      "sha256": "52ce15871b402e082d4e111c8ec16d609d4d8a0669985e45b3813b2afbe137f3"
+    },
+    {
+      "path": "layers/eyes-sparkle.png",
+      "bytes": 5482,
+      "sha256": "b3f508441ff47586e7174e6261a64c988ae3faddd3bcd59c5c7f1103b71cc0da"
+    },
+    {
+      "path": "layers/eyes-success.png",
+      "bytes": 6594,
+      "sha256": "d5735ebf448ad081e9b70cb401d6b82d75b6853f6e6f4b04ce6b3a67f99c6065"
+    },
+    {
+      "path": "layers/eyes-thinking.png",
+      "bytes": 13404,
+      "sha256": "b215154fbb3988cbf7799d9329edfb36af6eb63619bd9b5285478258f7af0af8"
+    },
+    {
+      "path": "layers/eyes-welcome.png",
+      "bytes": 6594,
+      "sha256": "d5735ebf448ad081e9b70cb401d6b82d75b6853f6e6f4b04ce6b3a67f99c6065"
+    },
+    {
+      "path": "layers/monocle.png",
+      "bytes": 27757,
+      "sha256": "2ff3b54958f89bf414016358c2e7bbda4bea30b24c597908e70bd9a0e1c89b10"
+    },
+    {
+      "path": "layers/mouth-default.png",
+      "bytes": 7522,
+      "sha256": "71a52a5c9b517d23b9db636f86cbb44b97f4f67a325311d3f51c3819e20f2779"
+    },
+    {
+      "path": "layers/mouth-notice.png",
+      "bytes": 7522,
+      "sha256": "71a52a5c9b517d23b9db636f86cbb44b97f4f67a325311d3f51c3819e20f2779"
+    },
+    {
+      "path": "layers/mouth-question.png",
+      "bytes": 7027,
+      "sha256": "23091a26f0c9981477635842606292bcb2302359a9a2caadaeba60ad7916b577"
+    },
+    {
+      "path": "layers/mouth-sleep.png",
+      "bytes": 4942,
+      "sha256": "45e3c57846d077d2b08b405006a1bcfdc225333f0b3da4f4c1cba9a9140f92e5"
+    },
+    {
+      "path": "layers/mouth-sparkle.png",
+      "bytes": 9509,
+      "sha256": "14005483aa70d78fdd2aa0be9fe00acdf48a838a41c80a03696075e06f72f9c5"
+    },
+    {
+      "path": "layers/mouth-success.png",
+      "bytes": 9509,
+      "sha256": "14005483aa70d78fdd2aa0be9fe00acdf48a838a41c80a03696075e06f72f9c5"
+    },
+    {
+      "path": "layers/mouth-thinking.png",
+      "bytes": 7027,
+      "sha256": "23091a26f0c9981477635842606292bcb2302359a9a2caadaeba60ad7916b577"
+    },
+    {
+      "path": "layers/mouth-welcome.png",
+      "bytes": 9509,
+      "sha256": "14005483aa70d78fdd2aa0be9fe00acdf48a838a41c80a03696075e06f72f9c5"
+    },
+    {
+      "path": "layers/overlay-default.png",
+      "bytes": 59472,
+      "sha256": "022d4790f58470ccf8119b3bed3738a28932ce0002a4acd0e0f994179815133c"
+    },
+    {
+      "path": "layers/overlay-notice.png",
+      "bytes": 61059,
+      "sha256": "9e0c102c6609a97b573123173aa0f5192473b71108815335d665543cfbd86d66"
+    },
+    {
+      "path": "layers/overlay-question.png",
+      "bytes": 62498,
+      "sha256": "1844f2ae7132cdf53e41b1e01e3664abe37b2b7cc6ff5ff39edb0691bd2b0c9a"
+    },
+    {
+      "path": "layers/overlay-sleep.png",
+      "bytes": 48231,
+      "sha256": "1cb50b0ee23d5f15dce82138f3e1e215fa21cd01c1ca3b7df5a6a7e7df392901"
+    },
+    {
+      "path": "layers/overlay-sparkle.png",
+      "bytes": 54299,
+      "sha256": "cd2726014cb3499dbb00b3c05284f0b04346fe7532f11b38b4653729baa72676"
+    },
+    {
+      "path": "layers/overlay-success.png",
+      "bytes": 56087,
+      "sha256": "783177c66e99780cb1184290709fc857ff857e31fd5343b2cd0a70889b7f5e3b"
+    },
+    {
+      "path": "layers/overlay-thinking.png",
+      "bytes": 63657,
+      "sha256": "4071fac8176ca6bf06adf8ca1f6c06d9cf2cdfa4762946865e9d219a6ab812ec"
+    },
+    {
+      "path": "layers/overlay-welcome.png",
+      "bytes": 53673,
+      "sha256": "bcb45a34c66d387275480cfe2b175ea40320d5ebb4afd0c5609d1c7e84e1be48"
+    },
+    {
+      "path": "layers/symbol-notice.png",
+      "bytes": 6244,
+      "sha256": "5c9936060f143a5d7c6cfc42014a29aa11c8e486f020514259681b04cb25f093"
+    },
+    {
+      "path": "layers/symbol-question.png",
+      "bytes": 11177,
+      "sha256": "2f2641d662e1ac3b1d30d6f98c34ff9de9cb9968e9683f4d006c66008f11c492"
+    },
+    {
+      "path": "layers/symbol-sleep.png",
+      "bytes": 6739,
+      "sha256": "000f67bc4165178d14eda8ae64a2ee1e42e7b0032583324627637fcef29e94f9"
+    },
+    {
+      "path": "layers/symbol-sparkle.png",
+      "bytes": 9895,
+      "sha256": "35588607718c7d096ef607eef1666ba6b136c248b1c838a0aca4c4ba33fa3a6e"
+    },
+    {
+      "path": "layers/symbol-success.png",
+      "bytes": 10942,
+      "sha256": "6f6d64b34ed29f7b89afb0dae931b3504c006659b0d6e9f171bf4eb563299e91"
+    },
+    {
+      "path": "layers/symbol-thinking.png",
+      "bytes": 12043,
+      "sha256": "e78a91fd4b3655a807f48b5736194ee1e12eaa51f09aa21e4a6ff619838bac7f"
+    },
+    {
+      "path": "layers/symbol-welcome.png",
+      "bytes": 8001,
+      "sha256": "3cb4a77c2e9ece8901b96d5351f2e47aef8c2b9d9dceef133356979949983d16"
+    },
+    {
+      "path": "png/charcoal/highsoul-default-right.png",
+      "bytes": 297773,
+      "sha256": "4ae0f066ca2ffc1247f0b1ab40caf11fd16f1706834b1546647f00c88db1c261"
+    },
+    {
+      "path": "png/charcoal/highsoul-notice-right.png",
+      "bytes": 299195,
+      "sha256": "5d4547f3d1fdb81b253b778c8290c9e1c46e82a90640e695ce64296cc6e1ba8b"
+    },
+    {
+      "path": "png/charcoal/highsoul-question-right.png",
+      "bytes": 300781,
+      "sha256": "69838de7d30a7bdfa2bafe60c0a092a7e8c1b40d6c356cb3655d1b8713d20bda"
+    },
+    {
+      "path": "png/charcoal/highsoul-sleep-right.png",
+      "bytes": 292999,
+      "sha256": "99f3d137c0ba35ef74d2ccd443cdd5cbf0fa954fd2a64d3d8b08922446d81a4b"
+    },
+    {
+      "path": "png/charcoal/highsoul-sparkle-right.png",
+      "bytes": 297837,
+      "sha256": "5aaaf027fd895eaa2a9bbbdf5398f3620ed3631603e69693131cd109cb326147"
+    },
+    {
+      "path": "png/charcoal/highsoul-success-right.png",
+      "bytes": 298994,
+      "sha256": "9eb2887ddf8ec070b382299d0962266d712d96e67374e93cb6a7f4304c2b7e85"
+    },
+    {
+      "path": "png/charcoal/highsoul-thinking-right.png",
+      "bytes": 302068,
+      "sha256": "dccdcf7d5129d20f58eebfb05e008bbee80a93e23fd36c8e34198151c14c3eba"
+    },
+    {
+      "path": "png/charcoal/highsoul-welcome-right.png",
+      "bytes": 296453,
+      "sha256": "ad00aa97168974a3b2ad930f043c98d71086b3f8e605f56a15505d8531c5cfa9"
+    },
+    {
+      "path": "png/sky-blue/highsoul-default-right.png",
+      "bytes": 281211,
+      "sha256": "f55b54dbe6880bf990f984f3e1ada83512bc3a8a02c467edcb3bee1eb82631b7"
+    },
+    {
+      "path": "png/sky-blue/highsoul-notice-right.png",
+      "bytes": 282048,
+      "sha256": "53c45811c73e6f65bc63b1400c5241b2c33fce7e857ef6e4cd15bee222f35cbc"
+    },
+    {
+      "path": "png/sky-blue/highsoul-question-right.png",
+      "bytes": 283511,
+      "sha256": "83149c0f095d8050c874aa0ee91c21c8323d9ebd63ba84da545f5fc6032b40aa"
+    },
+    {
+      "path": "png/sky-blue/highsoul-sleep-right.png",
+      "bytes": 277022,
+      "sha256": "6e49b451ebd17ecd7d83b1944bce31d6e2087280c43c3588345c5412d8991472"
+    },
+    {
+      "path": "png/sky-blue/highsoul-sparkle-right.png",
+      "bytes": 281076,
+      "sha256": "bf02d1d7ee4ca91bc42a04ac795c71e9476125c13ca447fb8d3cd37de77ed9f8"
+    },
+    {
+      "path": "png/sky-blue/highsoul-success-right.png",
+      "bytes": 282080,
+      "sha256": "c67d5a321e020ac5c41522e114555e531ad0a4e9f493a11a24aff7380fae2750"
+    },
+    {
+      "path": "png/sky-blue/highsoul-thinking-right.png",
+      "bytes": 284396,
+      "sha256": "0401569a4fdc6db7da99f84ee913c6ea85e3dc999be57a7350282b79a30fc95c"
+    },
+    {
+      "path": "png/sky-blue/highsoul-welcome-right.png",
+      "bytes": 279660,
+      "sha256": "d8256584d72e8b529a36c438aa9985e8b4b29ac6e3fab5a7a31a50009e3b5838"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 534,
+      "sha256": "1dbeb0262abd27b873288b997463dfd9787197a731e38b992750698b25816767"
+    },
+    {
+      "path": "source/highsoul-default-right-charcoal.svg",
+      "bytes": 55255,
+      "sha256": "89883c2b4ca866a1310405deb5fb3062b7d2bdb62d06cd08b5d7c946b0afb2c8"
+    },
+    {
+      "path": "source/highsoul-default-right-sky-blue.svg",
+      "bytes": 52975,
+      "sha256": "f63cfc1e9fd6a656c5648393e43a4e419e0b00464dab4e011193289c4fcda949"
+    },
+    {
+      "path": "source/highsoul-notice-right-charcoal.svg",
+      "bytes": 55447,
+      "sha256": "0b6a306d9f008a320cf2fa074be93304d8ba9a57ac7370ef113d6f790ac3ee22"
+    },
+    {
+      "path": "source/highsoul-notice-right-sky-blue.svg",
+      "bytes": 53167,
+      "sha256": "57397a9282be5dc5abdef2154c10c6de05d2f1f5fcc3123d63a20875ffc9eb74"
+    },
+    {
+      "path": "source/highsoul-question-right-charcoal.svg",
+      "bytes": 55584,
+      "sha256": "6a26fc9bb5a8b720c52d4309d8bf78eb32531dfa2448f2f4cd2b9e2cf9243f07"
+    },
+    {
+      "path": "source/highsoul-question-right-sky-blue.svg",
+      "bytes": 53304,
+      "sha256": "995fb937072baf6f5495d6ba5387cbfbf9b61c38671b27c735d5f93386048d66"
+    },
+    {
+      "path": "source/highsoul-sleep-right-charcoal.svg",
+      "bytes": 52526,
+      "sha256": "115ed63b1df1894adaa19928f4f35de3728a9a56dab0443a4fd0f041dc428a0b"
+    },
+    {
+      "path": "source/highsoul-sleep-right-sky-blue.svg",
+      "bytes": 50246,
+      "sha256": "4ad261468a9f99bad9148f82d586e861f2870839ca31f7de75b754998d53c221"
+    },
+    {
+      "path": "source/highsoul-sparkle-right-charcoal.svg",
+      "bytes": 53906,
+      "sha256": "2e24a5beedd007a68ba18bab02df93e9bc8988261f362f1e5215f432dce767e5"
+    },
+    {
+      "path": "source/highsoul-sparkle-right-sky-blue.svg",
+      "bytes": 51626,
+      "sha256": "6f8eb18c0d0bd05d4db7cf7d0eae5f0652545cb3c751916576da80376bc14d70"
+    },
+    {
+      "path": "source/highsoul-success-right-charcoal.svg",
+      "bytes": 53475,
+      "sha256": "673b7b6c868b4b0522cfad1e747068bf452f142505fcf48ceaeba20a765d9753"
+    },
+    {
+      "path": "source/highsoul-success-right-sky-blue.svg",
+      "bytes": 51195,
+      "sha256": "df55780ffe237cdb36796e46d3990b931b8002bfad0889008f42525893c8cfc9"
+    },
+    {
+      "path": "source/highsoul-thinking-right-charcoal.svg",
+      "bytes": 55715,
+      "sha256": "90bfc4cb1fde2b698540f60b734fb255d09c881a3b12d43b7d1fa88370081f79"
+    },
+    {
+      "path": "source/highsoul-thinking-right-sky-blue.svg",
+      "bytes": 53435,
+      "sha256": "dec0aef85239f924f480845bf9d15af46e46692c0f9a94f9b955f952b605eb20"
+    },
+    {
+      "path": "source/highsoul-welcome-right-charcoal.svg",
+      "bytes": 53532,
+      "sha256": "f86ed2ceae9027e16a4254b0ed301761e8f89ccd32bac6d47f445c99fc144e92"
+    },
+    {
+      "path": "source/highsoul-welcome-right-sky-blue.svg",
+      "bytes": 51252,
+      "sha256": "74a983df41a7343cc482687e8136101d38edec3d9bcf309a1471d031267c0d7c"
+    },
+    {
+      "path": "source/layers/body-charcoal.svg",
+      "bytes": 51077,
+      "sha256": "f8c27397c36338d291865ad31fbc8cba6aee7552bfb454d4238083060660b795"
+    },
+    {
+      "path": "source/layers/body-mask.svg",
+      "bytes": 5587,
+      "sha256": "43b4fba5ae01a7dd159348e59a3cc6b0ee7ae7a0b3af45a80a6bdbc5f8ae354c"
+    },
+    {
+      "path": "source/layers/body-sky-blue.svg",
+      "bytes": 48797,
+      "sha256": "6c5c8a7d5f1cf7aed0cf0eeeb6b428dd6b9824efc18b2038cc0388fab7b78e5c"
+    },
+    {
+      "path": "source/layers/overlay-default.svg",
+      "bytes": 5366,
+      "sha256": "2b865814272db10b756e005c98a7bb9915bac495593b21c508736cd2a138522b"
+    },
+    {
+      "path": "source/layers/overlay-notice.svg",
+      "bytes": 5558,
+      "sha256": "bbbb4228902a6f866fd52188c4c3d68d01161440ba74db773f9a374f896693f4"
+    },
+    {
+      "path": "source/layers/overlay-question.svg",
+      "bytes": 5695,
+      "sha256": "e427a0f82e139ef11938262c1b02a306e03b9e1946c0718e873ee808c91abe27"
+    },
+    {
+      "path": "source/layers/overlay-sleep.svg",
+      "bytes": 2637,
+      "sha256": "e958f894e5cd87396d9d80d1046002d94acabd140ee673e1550a8176206854a1"
+    },
+    {
+      "path": "source/layers/overlay-sparkle.svg",
+      "bytes": 4017,
+      "sha256": "a7842cfdea5eafa8fdcb75aa367b43a8c6cee1afab47c73c4470e143d4f6325d"
+    },
+    {
+      "path": "source/layers/overlay-success.svg",
+      "bytes": 3586,
+      "sha256": "40ab365f2f4390f65f97871ee7f34b9d677424f4a72343d163e6145c002fa5b3"
+    },
+    {
+      "path": "source/layers/overlay-thinking.svg",
+      "bytes": 5826,
+      "sha256": "80e9f6f6edf385442ddaa73b1f94c29624af7dd75d3efe48616f59addfac35ec"
+    },
+    {
+      "path": "source/layers/overlay-welcome.svg",
+      "bytes": 3643,
+      "sha256": "aae52fa36cba3af8afe28c0ec42593f7b23b4837faef4579137eca22f0d8a8b4"
+    },
+    {
+      "path": "states.json",
+      "bytes": 1660,
+      "sha256": "0772b3cd9b66841e0845ab9362e7f0a9c1e082079ccc16fe8bf15dfb6d8b6722"
+    },
+    {
+      "path": "web/demo.html",
+      "bytes": 1432,
+      "sha256": "0ead40dd57a6172474228499ff0b9df360a6adbcc7ba8a384c80c1f9a4d49a24"
+    },
+    {
+      "path": "web/highsoul.css",
+      "bytes": 3078,
+      "sha256": "edd579b6eafd09292e1009f4f6d9de65a7d2302e61fe3b6e07e2af9c7a145130"
+    },
+    {
+      "path": "web/highsoul.js",
+      "bytes": 13711,
+      "sha256": "3116b9800ddf8791d7e0718465c3ff057735a9ba582d520a4c4be57e47a01869"
+    }
+  ],
+  "qa_v1_1": {
+    "version": "1.1.0",
+    "states": 8,
+    "fullStatePNGs": 16,
+    "layerPNGs": 11,
+    "sourceSVGs": 27,
+    "canvas": [
+      1024,
+      1024
+    ],
+    "direction": "image-right",
+    "monocle": "white, U-shaped side-return cord",
+    "transparentCorners": "PASS: 16/16",
+    "actualPNGBrowserDownload": "PASS: exact byte match",
+    "nativeHover": "PASS: 3 running wave transforms",
+    "hoverExit": "PASS: 3 paused transforms",
+    "staticOptOut": "PASS: flow display none",
+    "keyboard": "PASS: focus-visible static blue, no flow",
+    "settledFlowPixelTest": {
+      "durationSeconds": 1.8,
+      "fieldOpacityA": "0.97",
+      "fieldOpacityB": "0.97",
+      "meanBodyRGBDelta": 6.524628879892038,
+      "changedPixelPercent": 51.417004048582996
+    },
+    "actualMobileHardware": "not tested",
+    "actualWebsitesModified": false,
+    "fix": "restored original 310x250 animation plane and displacement; all 8 gallery items and all 3 examples continuously flow",
+    "hoverCycles": "PASS: 7 actual browser frames across two subsequent wave cycles, opacity 0.97 throughout",
+    "pixelChanges": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "meanRGBDelta": 10.634199134199166,
+        "changedPercent": 68.18181818181819
+      },
+      {
+        "pair": [
+          1,
+          2
+        ],
+        "meanRGBDelta": 18.805194805194784,
+        "changedPercent": 82.85714285714286
+      },
+      {
+        "pair": [
+          2,
+          3
+        ],
+        "meanRGBDelta": 25.19393939393937,
+        "changedPercent": 89.03896103896103
+      },
+      {
+        "pair": [
+          3,
+          4
+        ],
+        "meanRGBDelta": 33.80216450216451,
+        "changedPercent": 93.53246753246754
+      },
+      {
+        "pair": [
+          4,
+          5
+        ],
+        "meanRGBDelta": 8.444588744588733,
+        "changedPercent": 63.116883116883116
+      },
+      {
+        "pair": [
+          5,
+          6
+        ],
+        "meanRGBDelta": 24.18623376623377,
+        "changedPercent": 88.15584415584415
+      }
+    ],
+    "pointerClickHold": "PASS: pointer left, three animations continue running",
+    "releaseHold": "PASS: gray reset and 3 paused animations",
+    "motionOptOut": "PASS: hidden field, stopped wave",
+    "PNGsUnchanged": true
+  },
+  "qa": {
+    "version": "1.2.0",
+    "layerPNGs": 35,
+    "splitLayerComposite": "composite of eyes+mouth+monocle+symbol vs original overlay PNG: mean abs diff ~0.12-0.18 of 255 (lens tint and antialiasing only)",
+    "browserChecked": "in-app browser (Chrome engine): all 8 states hover starts loops and glance, leaving returns to rest pose; ^^ expression swap; react 1/2/3 run and resolve, 3 inspected at apex and landing; reaction ignored under data-hs-motion=static; keyboard focus gives no motion; setState while moving; gallery mounts 11/11",
+    "notTested": [
+      "actual mobile hardware",
+      "Safari/Firefox",
+      "OS-level prefers-reduced-motion (only data-hs-motion=static path exercised)",
+      "color-flow speed measured by eye only, not timed"
+    ],
+    "actualWebsitesModified": false
+  }
+}

@@ -1,0 +1,96 @@
+TOODDAE No-Sale License
+Version 1.0
+
+This is a custom source-available license, not an OSI-approved open-source
+license. It permits business use but restricts sales and paid access.
+
+1. Scope and copyright
+
+"Covered Material" means the TOODDAE software, documentation, and other
+material that a copyright holder makes available under this license,
+including copies and modified versions of that material. "Licensor" means
+each copyright holder granting rights to their Covered Material under this
+license. Each copyright holder retains ownership of their contributions.
+This license does not claim rights in third-party material distributed under
+separate license terms or in material not provided under this license.
+
+2. Permission
+
+Subject to these terms, each Licensor grants you a worldwide, non-exclusive,
+royalty-free copyright license to use, run, study, copy, modify, and create
+derivative works of their Covered Material, and to distribute or share
+original or modified copies without charging for them. These permissions
+include personal use, use within a company or organization, and use in
+commercial work. Earning revenue from your own work is not, by itself,
+prohibited; selling the Covered Material or charging for access to it is.
+
+3. No sale or paid access
+
+Without a separate written authorization from the relevant copyright
+holders, you must not:
+
+(a) sell, resell, rent, lease, or license the Covered Material, including
+    modified versions, in exchange for payment;
+(b) provide the Covered Material's functionality to others as a paid hosted
+    service, SaaS, subscription, or other service that charges for access
+    to or use of that functionality; or
+(c) make a copy of, access to, or use of the Covered Material conditional on
+    payment for a bundle, membership, other product, or other service.
+
+These restrictions apply whether the charge is collected directly or
+through an intermediary. Describing the Covered Material as "free" does
+not permit a payment requirement for obtaining or using it.
+
+Ordinary employee compensation, revenue from business activities that
+merely use the Covered Material internally, and payment for independently
+created work or output are not payment for the Covered Material itself.
+This clarification does not permit paid access to its functionality under
+(a), (b), or (c).
+
+4. Conditions for sharing and modification
+
+When you distribute original or modified Covered Material, you must include
+this license and preserve the applicable copyright, attribution, and
+license notices. Clearly identify your modifications so recipients do not
+mistake them for an official TOODDAE release. Do not impose terms that
+remove the permissions granted here for the Covered Material, or purport
+to authorize sales or paid access forbidden by section 3. These conditions
+do not require you to publish your modifications or their source code.
+
+5. User data, separate material, and trademarks
+
+Your independently created notes, tasks, data, and other output do not
+become Covered Material merely because you create or manage them using
+TOODDAE. Separately licensed third-party material remains governed by its
+own terms; this license does not override those terms. No right to use a
+copyright holder's trademarks or to imply official endorsement is granted,
+except as needed for truthful identification and preservation of notices.
+
+6. Separate authorization and reserved rights
+
+Copyright holders may use or sell their own work or grant separate written
+permissions. To sell or offer paid access to material owned by multiple
+copyright holders, you must obtain all permissions required for that use.
+No rights beyond those expressly granted here are granted. Rights and
+exceptions provided by applicable law are not limited by this license.
+
+7. Termination
+
+Your permissions under this license terminate automatically if you violate
+its terms. To the extent permitted by law, you must then stop activities
+that require those permissions. Termination does not remove any liability
+for earlier violations. A Licensor may reinstate permissions in writing.
+
+8. Disclaimer
+
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE COVERED MATERIAL IS PROVIDED
+"AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. TO THE EXTENT PERMITTED BY APPLICABLE LAW, NO LICENSOR IS
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE COVERED
+MATERIAL OR ITS USE.
+
+9. Controlling text
+
+This English license text controls. README explanations and translations
+are summaries for convenience and do not replace or expand these terms.

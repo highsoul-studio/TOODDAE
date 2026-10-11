@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "selectedMonocle": "white",
+  "cord": "U-shaped, returns to side of body",
+  "direction": "image-right",
+  "originalMaster": "highsoul-monocle-white.html",
+  "originalMasterSHA256": "07084ac4923c0c3e01f799c86347458b97e21c03aae4dab77608d218b569fe9f",
+  "source": "approved mascot body, facial raster layers and own SVG overlays; no new AI image generation",
+  "notFullyVector": true,
+  "canvas": [
+    1024,
+    1024
+  ],
+  "originalBodyResolution": [
+    310,
+    250
+  ],
+  "actualWebsitesModified": false
+}

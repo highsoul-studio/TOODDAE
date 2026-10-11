@@ -1,0 +1,82 @@
+[
+  {
+    "id": "default",
+    "label": "기본",
+    "use": "프로필·푸터·일반 링크",
+    "face": "normal",
+    "dy": 0,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  },
+  {
+    "id": "question",
+    "label": "문의",
+    "use": "이메일 문의·도움말·FAQ",
+    "face": "curious",
+    "dy": -3,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  },
+  {
+    "id": "sparkle",
+    "label": "후원·선물",
+    "use": "선물·후원·추천 링크",
+    "face": "sparkle",
+    "dy": 0,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  },
+  {
+    "id": "welcome",
+    "label": "환영",
+    "use": "소개·가입·시작하기",
+    "face": "happy",
+    "dy": 0,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  },
+  {
+    "id": "success",
+    "label": "완료",
+    "use": "전송 완료·저장·감사",
+    "face": "happy",
+    "dy": 0,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  },
+  {
+    "id": "thinking",
+    "label": "생각 중",
+    "use": "검색·처리·준비 중",
+    "face": "curious",
+    "dy": -4,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  },
+  {
+    "id": "notice",
+    "label": "공지",
+    "use": "새 소식·업데이트·안내",
+    "face": "normal",
+    "dy": -1,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  },
+  {
+    "id": "sleep",
+    "label": "대기",
+    "use": "휴식·오프라인·점검",
+    "face": "sleep",
+    "dy": 0,
+    "direction": "image-right",
+    "gazeX": 6,
+    "whiteMonocle": true
+  }
+]

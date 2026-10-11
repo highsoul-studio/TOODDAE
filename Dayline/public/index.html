@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#09090b">
+  <title>TOODDAE</title>
+  <!--BOOT-->
+  <script src="/theme.js"></script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/palettes.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/assets/highsoul/web/highsoul.css">
+  <script src="/assets/highsoul/web/highsoul.js" defer></script>
+  <script type="module" src="/app.js"></script>
+  <script type="module" src="/pages.js"></script>
+</head>
+<body>
+<!--SPRITE-->
+<header class="top"><div class="wrap">
+  <a class="brand" href="#/do" data-testid="brand">
+    <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><g data-testid="brand-mark" data-logo="td-check-03"><path d="M86 105H291C364 105 422 157 422 231C422 275 404 309 354 345L326 317C357 295 372 266 372 231C372 181 340 146 291 146H86C58 146 58 105 86 105Z"/><path d="M168 164H221V322H301L354 371L426 302L446 323L354 411L301 360H168Z"/></g></svg>
+    TOODDAE
+  </a>
+  <nav class="pages" id="pages" data-testid="pages" aria-label="Pages">
+    <a href="#/do" data-page="do" data-testid="nav-do">Do</a>
+    <a href="#/write" data-testid="nav-write" data-page="write">Write</a>
+    <a href="#/set" data-testid="nav-set" data-page="set">Set</a>
+    <i class="pages__node" aria-hidden="true"></i>
+  </nav>
+  <form class="quick" id="quick" autocomplete="off">
+    <svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>
+    <input id="quick-input" data-testid="quick-input" data-i18n-ph="quick.placeholder" data-i18n-aria="quick.label" maxlength="500">
+    <button type="button" class="icon-btn" id="quick-more" data-testid="quick-more" data-i18n-aria="quick.more" data-i18n-title="quick.more"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg></button>
+    <kbd aria-hidden="true">⌘K</kbd>
+  </form>
+  <div class="top__right">
+    <button type="button" class="icon-btn theme" id="theme" data-testid="theme-toggle"><svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg></button>
+    <button type="button" class="btn btn--ghost lang" id="lang" data-testid="lang-button" aria-haspopup="listbox" data-i18n-aria="lang.label" data-i18n-title="lang.label"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span class="btn__label" id="lang-name">日本語</span></button>
+    <button type="button" class="btn btn--ghost folder" id="folder" data-testid="folder-button"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg><span class="btn__label" id="folder-name"></span></button>
+    <button type="button" class="sync" id="sync" data-testid="sync-pill" data-state="retry"><i class="sync__dot"></i><span class="sync__text" id="sync-text"></span></button>
+    <button type="button" class="icon-btn" id="bell" aria-pressed="false" data-i18n-aria="bell.label" data-i18n-title="bell.title"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg></button>
+  </div>
+</div></header>
+
+<main class="wrap" id="page-do" data-page="do" data-testid="page-do">
+  <section class="hero" id="hero" data-testid="panel-hero"></section>
+  <div class="grid">
+    <section class="sheet" id="tasks" data-testid="panel-tasks" aria-labelledby="h-tasks"></section>
+    <section class="col" id="routine" data-testid="panel-routine" aria-labelledby="h-routine"></section>
+    <aside class="col col--side" id="side" data-testid="panel-side"></aside>
+  </div>
+</main>
+<main class="wrap" id="page-write" data-page="write" data-testid="page-write" hidden></main>
+<main class="wrap" id="page-set" data-page="set" data-testid="page-set" hidden></main>
+<footer class="footer" data-testid="footer">TOODDAE <span>by HIGHSOUL</span> · <span id="app-version"></span></footer>
+
+<dialog id="dlg" data-testid="item-dialog" aria-labelledby="dlg-h"></dialog>
+<dialog id="confirm" data-testid="confirm-dialog" aria-labelledby="confirm-h"></dialog>
+<dialog id="sec" data-testid="section-dialog" aria-labelledby="sec-h"></dialog>
+<dialog id="status" data-testid="status-dialog" aria-labelledby="status-h"></dialog>
+<dialog id="root-changed" data-testid="root-changed-dialog" aria-labelledby="root-changed-h"></dialog>
+<div id="toasts" data-testid="toasts" role="status" aria-live="polite"></div>
+</body>
+</html>

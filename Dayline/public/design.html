@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>TOODDAE · Design System</title>
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/palettes.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* スタイルガイド専用の見出し・見本レイアウト */
+    .sample-dlg { max-width: 440px; border: 1px solid var(--line-2); border-radius: var(--r-lg); background: var(--n-2); box-shadow: var(--dialog-shadow); }
+    .g { padding-block: 56px 96px; }
+    .g h1 { margin: 0 0 8px; font: 300 var(--fs-hero) / 1 var(--font); letter-spacing: -0.045em; }
+    .g .lead { max-width: 64ch; margin: 0 0 var(--s-7); color: var(--text-2); font-size: var(--fs-lg); line-height: 1.7; }
+    .g section { margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--line-1); }
+    .g h2 { margin: 0 0 var(--s-2); font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.02em; }
+    .g .note { max-width: 70ch; margin: 0 0 var(--s-5); color: var(--text-2); }
+    .g h3 { margin: var(--s-5) 0 var(--s-3); color: var(--text-2); font-size: var(--fs-sm); font-weight: 600; }
+    .sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 10px; }
+    .sw div { display: flex; flex-direction: column; justify-content: flex-end; height: 92px; padding: 10px 12px; border: 1px solid var(--line-1); border-radius: var(--r-md); font-size: var(--fs-xs); line-height: 1.4; }
+    .sw b { font-weight: 600; }
+    .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); }
+    .demo { max-width: 560px; }
+    .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--s-6); align-items: start; }
+    .scale p { margin: 0 0 var(--s-3); }
+    .scale small { display: inline-block; width: 92px; color: var(--text-3); font-size: var(--fs-xs); }
+    .rules { margin: 0; padding-left: 1.2em; color: var(--text-2); line-height: 1.9; }
+    .rules li::marker { color: var(--p-400); }
+    .pagebg { height: 120px; border: 1px solid var(--line-1); border-radius: var(--r-md); background: var(--page-bg); }
+  </style>
+  <script type="module" src="/design.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/">
+    <svg viewBox="0 0 22 22" aria-hidden="true"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--brand-a)"/><stop offset="1" style="stop-color:var(--brand-b)"/></linearGradient></defs><rect width="22" height="22" rx="6" fill="url(#bg)"/><path d="M5 14.5h12" style="stroke:var(--brand-ink)" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round" fill="none"/><path d="M5 14.5h8M13 5.5v9" style="stroke:var(--brand-ink)" stroke-width="1.6" stroke-linecap="round" fill="none"/><circle cx="13" cy="14.5" r="2.1" style="fill:var(--brand-ink)"/></svg>
+    TOODDAE
+  </a>
+  <div class="top__right"><button type="button" class="icon-btn theme" id="theme" aria-label="테마 전환" title="테마 전환"><svg class="i i-sun" aria-hidden="true"><use href="/icons.svg#i-sun"/></svg><svg class="i i-moon" aria-hidden="true"><use href="/icons.svg#i-moon"/></svg></button><a class="btn btn--ghost" href="/">대시보드로 돌아가기</a></div>
+</div></header>
+
+<main class="wrap g">
+  <h1>Design system</h1>
+  <p class="lead">검정을 바탕으로, 보라색은 “지금 · 완료 · 주 동작 · 포커스”에만 씁니다. 나머지는 모두 무채색이라 보라가 나오는 곳이 곧 지금 봐야 할 곳입니다. 값은 <code>tokens.css</code> 한 곳에서만 정합니다. 라이트 테마는 같은 규칙에 흰색 바탕과 주황-노랑 하이라이트입니다(우측 위 해/달 버튼).</p>
+
+  <section>
+    <h2>Color</h2>
+    <p class="note">바탕은 무채색 그라데이션을 아주 옅게만 얹은 검정. 보라는 OKLCH 색상각 288, 채도를 낮춘 비즈니스 톤입니다. 숫자는 WCAG 대비비(패널 <code>n-2</code> 기준).</p>
+    <h3>Page</h3>
+    <div class="pagebg" role="img" aria-label="페이지 배경 그라데이션 견본"></div>
+    <h3>Neutral</h3>
+    <div class="sw">
+      <div style="background: var(--n-0)"><b>n-0</b>#050506</div>
+      <div style="background: var(--n-1)"><b>n-1</b>#09090b · page</div>
+      <div style="background: var(--n-2)"><b>n-2</b>#0f0f11 · sheet</div>
+      <div style="background: var(--n-3)"><b>n-3</b>#161618 · hover</div>
+      <div style="background: var(--n-4)"><b>n-4</b>#1e1e20 · chip</div>
+      <div style="background: var(--n-5)"><b>n-5</b>#27272a · track</div>
+    </div>
+    <h3>Text</h3>
+    <div class="sw">
+      <div style="background: var(--n-2); color: var(--text-1)"><b>text-1</b>#f3f3f6 · 17.3:1</div>
+      <div style="background: var(--n-2); color: var(--text-2)"><b>text-2</b>#b1b1b3 · 8.9:1</div>
+      <div style="background: var(--n-2); color: var(--text-3)"><b>text-3</b>#868688 · 5.3:1</div>
+      <div style="background: var(--n-2); color: var(--text-4)"><b>text-4</b>#555557 · 장식 전용</div>
+    </div>
+    <h3>Business purple</h3>
+    <div class="sw">
+      <div style="background: var(--p-950); color: var(--p-200)"><b>p-950</b>#181232</div>
+      <div style="background: var(--p-900); color: var(--p-200)"><b>p-900</b>#2b2155 · 히트맵 1</div>
+      <div style="background: var(--p-800); color: var(--p-100)"><b>p-800</b>#3f2f7d</div>
+      <div style="background: var(--p-700); color: #fff"><b>p-700</b>#5742aa · 눌림</div>
+      <div style="background: var(--p-600); color: #fff"><b>p-600</b>#7057d5 · 채움 5.2:1</div>
+      <div style="background: var(--p-550); color: #fff"><b>p-550</b>#7a62e1 · hover</div>
+      <div style="background: var(--p-500); color: #0b0b0d"><b>p-500</b>#8a75f1</div>
+      <div style="background: var(--p-400); color: #0b0b0d"><b>p-400</b>#a193fc · 아이콘·now</div>
+      <div style="background: var(--p-300); color: #0b0b0d"><b>p-300</b>#bab4fb · 강조 글자</div>
+      <div style="background: var(--p-200); color: #0b0b0d"><b>p-200</b>#d2cffa</div>
+    </div>
+    <h3>Signal (소량만)</h3>
+    <div class="sw">
+      <div style="background: rgb(230 181 93 / 0.1); border-color: rgb(230 181 93 / 0.24); color: var(--amber)"><b>amber</b>#e6b55d · 이월</div>
+      <div style="background: rgb(240 127 119 / 0.1); border-color: rgb(240 127 119 / 0.26); color: var(--coral)"><b>coral</b>#f07f77 · 기한 초과</div>
+    </div>
+
+    <h3>Light theme (고정 값 견본)</h3>
+    <p class="note">같은 토큰 이름에 라이트 값이 들어갑니다. 바탕은 흰색 계열, 하이라이트는 주황-노랑(OKLCH 색상각 48–90). 채움 위의 글자는 짙은 갈색이라 대비가 높습니다. 아래는 현재 테마와 상관없이 고정된 견본입니다.</p>
+    <div class="sw">
+      <div style="background:#f6f6f7;color:#131416"><b>n-1</b>#f6f6f7 · page</div>
+      <div style="background:#ffffff;color:#131416"><b>n-2</b>#ffffff · sheet</div>
+      <div style="background:#f1f1f3;color:#131416"><b>n-3</b>#f1f1f3 · hover</div>
+      <div style="background:#eaeaee;color:#131416"><b>n-4</b>#eaeaee · chip</div>
+      <div style="background:#dfdfe4;color:#131416"><b>n-5</b>#dfdfe4 · track</div>
+      <div style="background:#fff1cc;color:#3c1d0e"><b>p-100</b>#fff1cc</div>
+      <div style="background:#ffe29c;color:#3c1d0e"><b>p-200</b>#ffe29c · 히트맵 1</div>
+      <div style="background:#ffb629;color:#2a1700"><b>p-400</b>#ffb629 · 히트맵 2</div>
+      <div style="background:#fb9d00;color:#2a1700"><b>p-500</b>#fb9d00 · 채움 (글자 8.1:1)</div>
+      <div style="background:#e87a00;color:#2a1700"><b>p-600</b>#e87a00 · 히트맵 4</div>
+      <div style="background:#ffffff;color:#b44f00;border-color:rgb(0 0 0 / 0.11)"><b>accent-text</b>#b44f00 · 강조 글자 5.2:1</div>
+      <div style="background:#ffffff;color:#d86800;border-color:rgb(0 0 0 / 0.11)"><b>accent-icon</b>#d86800 · 아이콘·now 3.6:1</div>
+      <div style="background:#ffffff;color:#7e5d1d;border-color:rgb(0 0 0 / 0.11)"><b>amber</b>#7e5d1d · 이월 6.0:1</div>
+      <div style="background:#ffffff;color:#c13c3b;border-color:rgb(0 0 0 / 0.11)"><b>coral</b>#c13c3b · 기한 초과 5.3:1</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Typography</h2>
+    <p class="note">macOS 시스템 서체(SF Pro + 히라기노 + Apple SD Gothic Neo)라 한글·가나·한자·숫자가 한 번에 렌더링되고 다운로드가 없습니다. 숫자는 항상 표 형식(tabular)이라 시각·진행률이 흔들리지 않습니다. 대문자 라벨과 가운뎃점 연결 문자열은 쓰지 않습니다.</p>
+    <div class="scale">
+      <p style="font: 300 var(--fs-hero) / 1 var(--font); letter-spacing: -0.045em"><small>hero 300</small>10월 6일 14:00</p>
+      <p style="font-size: var(--fs-2xl); font-weight: 500; letter-spacing: -0.02em"><small>2xl 500</small>오늘 할 일</p>
+      <p style="font-size: var(--fs-xl); font-weight: 500; letter-spacing: -0.02em"><small>xl 500</small>4/11 완료</p>
+      <p style="font-size: var(--fs-lg)"><small>lg 400</small>設計レビューの資料を確認する</p>
+      <p><small>md 400 · 본문</small>PRレビューの時間を確認する — 14:00 に BAP さん</p>
+      <p style="font-size: var(--fs-sm); color: var(--text-2)"><small>sm 400</small>다가오는 일정 · 보조 설명</p>
+      <p style="font-size: var(--fs-xs); color: var(--text-3)"><small>xs 500</small>12px가 최소 크기</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Shape & space</h2>
+    <p class="note">여백은 4px 격자. 모서리는 역할마다 다르게: 체크 6 · 입력/행 10 · 시트/대화상자 18 · 칩 완전 둥글게. 메인 시트만 떠 있고, 나머지 열은 얇은 선으로 구획한 평면입니다.</p>
+    <div class="row">
+      <div style="width:72px;height:72px;border-radius:var(--r-sm);background:var(--n-4)"></div>
+      <div style="width:72px;height:72px;border-radius:var(--r-md);background:var(--n-4)"></div>
+      <div style="width:72px;height:72px;border-radius:var(--r-lg);background:var(--n-4)"></div>
+      <div style="width:72px;height:36px;border-radius:var(--r-pill);background:var(--n-4)"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <h3>Button</h3>
+    <div class="row">
+      <button class="btn btn--primary">저장</button>
+      <button class="btn">닫기</button>
+      <button class="btn btn--ghost">로컬 폴더 변경 <svg class="i" aria-hidden="true"><use href="/icons.svg#i-folder"/></svg></button>
+      <button class="btn btn--danger">할 일 취소</button>
+      <button class="btn btn--sm">작은 버튼</button>
+      <button class="btn" disabled>비활성</button>
+      <button class="icon-btn" aria-label="알림 켜기"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-bell"/></svg></button>
+      <button class="icon-btn" aria-pressed="true" aria-label="알림 켜짐"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-bell"/></svg></button>
+    </div>
+    <h3>Quick add · Sync</h3>
+    <div class="row">
+      <div class="quick demo"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-plus"/></svg><input placeholder="할 일 추가 — Enter" aria-label="할 일 추가"><kbd>⌘K</kbd></div>
+      <span class="sync" data-state="live"><i class="sync__dot"></i>로컬 폴더에 연결됨</span>
+      <span class="sync" data-state="retry"><i class="sync__dot"></i>다시 연결하는 중…</span>
+      <span class="sync" data-state="ro"><i class="sync__dot"></i>읽기 전용</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Custom controls</h2>
+    <p class="note">브라우저 기본 <code>select</code>·날짜·시간 팝업은 쓰지 않습니다. 같은 토큰으로 만든 자체 부품이며, 방향키·Enter·Esc로 조작하고 모달 <code>&lt;dialog&gt;</code> 안에서도 열립니다. 아래는 실제로 동작합니다.</p>
+    <div class="two">
+      <div style="display:grid;gap:var(--s-4);max-width:360px">
+        <div class="field"><span class="field__l">Select</span><div id="demo-select"></div></div>
+        <div class="form__row"><div class="field"><span class="field__l">Date</span><div id="demo-date"></div></div><div class="field"><span class="field__l">Date (empty)</span><div id="demo-date2"></div></div></div>
+        <div class="field"><span class="field__l">Time (입력 · 시/분 팝업)</span><div id="demo-time"></div></div>
+        <div class="field"><span class="field__l">Weekdays</span><div id="demo-days"></div></div>
+        <label class="check"><input type="checkbox" class="chk" checked><span class="check__t"><b>ルーティンにする</b><small>체크박스 카드. 켜면 보라색 테두리와 옅은 배경이 됩니다.</small></span></label>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Destructive confirm</h3>
+        <p class="note">파괴적인 동작(취소·건너뛰기·삭제)은 항상 확인 모달을 거칩니다. 붉은 채움 버튼 + 안전한 “돌아가기”. 취소는 파일에서 지우지 않고 <code>[-]</code>로 남겨 되돌릴 수 있습니다.</p>
+        <div class="sample-dlg"><div class="form"><h2>タスクをキャンセルしますか？</h2><p class="cf__body">ファイルからは削除されず「[-]」として残ります。あとで元に戻せます。</p><div class="form__foot"><span class="grow"></span><button class="btn btn--ghost">戻る</button><button class="btn btn--danger">タスクをキャンセル</button></div></div></div>
+        <h3>Hint · Error</h3>
+        <p class="hint" style="margin:0 0 var(--s-3)">開始日と締切日を両方空にすると、インボックスに保存されます。</p>
+        <p class="form__err" style="margin:0">締切日は開始日以降にしてください</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Task rows</h2>
+    <p class="note">체크박스 하나가 파일의 <code>- [ ]</code> 한 줄입니다. 부가 동작은 올려둘 때만 보입니다. 시각은 강조색으로 눌러 읽히게 하고, 상태 칩은 필요할 때만 붙입니다. 체크박스는 <b>제목 줄의 세로 중앙</b>에 있고, 메모·칩은 그 아래 둘째 줄이라 있어도 체크박스는 움직이지 않습니다. 메모는 제목 아래 최대 3줄. <b>체크박스를 눌러 보세요</b> — 취소선이 문장 왼쪽부터 그려집니다.</p>
+    <div class="two">
+      <div class="sheet">
+        <ul class="tasks">
+          <li class="task"><input class="chk" type="checkbox" aria-label="완료"><div class="task__text"><span class="strike"><span class="t-time">14:00–14:15</span> PRレビュー BAPさん</span></div><div class="task__act"><button class="icon-btn" aria-label="마감일 하루 미루기"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-skip"/></svg></button><button class="icon-btn" aria-label="편집"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-pencil"/></svg></button><button class="icon-btn" aria-label="취소 처리"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-x"/></svg></button></div><div class="task__sub"><div class="task__meta"><span class="chip chip--prio"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-flag"/></svg>높음</span><span class="chip"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-calendar"/></svg>마감 10/09</span></div></div></li>
+          <li class="task"><input class="chk" type="checkbox" aria-label="완료"><div class="task__text"><span class="strike">仕様質問の回答を確認 <span class="tag">#NG</span></span></div><div class="task__act"></div><div class="task__sub"><div class="task__meta"><span class="chip chip--carry">이월 2일</span></div></div></li>
+          <li class="task"><input class="chk" type="checkbox" aria-label="완료"><div class="task__text"><span class="strike">請求書の提出</span></div><div class="task__act"></div><div class="task__sub"><div class="task__meta"><span class="chip chip--over"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-calendar"/></svg>기한 10/03</span><span class="chip"><svg class="i" aria-hidden="true"><use href="/icons.svg#i-repeat"/></svg>every week</span></div></div></li>
+          <li class="task"><input class="chk" type="checkbox" aria-label="완료"><div class="task__text"><span class="strike">見積りの作成</span></div><div class="task__act"></div><div class="task__sub"><div class="task__memo">メモはタイトルの下に最大3行まで表示されます。
+長い行は折り返し、3行を超えた分は省略されます。
+詳細ダイアログを開くと全文を編集できます。
+この4行目は一覧では見えません。</div><div class="task__meta"><span class="chip">마감 10/09</span></div></div></li>
+          <li class="task is-done"><input class="chk" type="checkbox" checked aria-label="완료 취소"><div class="task__text"><span class="strike">部屋の掃除</span></div><div class="task__act"></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Routine group</h3>
+        <div class="rgroup">
+          <div class="rgroup__head"><span>コア業務(Top-Down)</span><span class="rgroup__bar" style="--v:43%"><i></i></span><span class="count">3/7</span></div>
+          <ul class="tasks">
+            <li class="task is-done"><input class="chk" type="checkbox" checked aria-label="완료 취소"><div class="task__text"><span class="strike">今日の目標を決める</span></div><div class="task__act"></div></li>
+            <li class="task"><input class="chk" type="checkbox" aria-label="완료"><div class="task__text"><span class="strike">今Sprintの目標の明確化</span></div><div class="task__act"></div></li>
+          </ul>
+        </div>
+        <h3>Progress ticks</h3>
+        <div class="ticks" style="max-width:300px"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <h3>Empty</h3>
+        <div class="empty"><b>오늘 할 일이 없어요.</b><br>위 입력창에 적고 Enter를 누르면 오늘 노트에 추가돼요.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Day line <span class="count" style="font-weight:400">— 기억에 남는 한 곳</span></h2>
+    <p class="note">시간이 적힌 할 일(<code>14:00</code>, <code>12:00-12:15</code>)이 하루의 가로축에 놓이고, 강조색 선이 지금입니다. 화면에서 유일하게 크게 움직이는 요소이며, 첫 로딩 때 한 번만 선이 자라납니다.</p>
+    <div class="dayline-wrap"><div class="dayline" style="--lanes:2">
+      <div class="dayline__rail"></div>
+      <div class="dayline__elapsed" style="width:36%"></div>
+      <i class="dayline__tick" style="left:0%"></i><span class="dayline__label" style="left:0%">8</span>
+      <i class="dayline__tick" style="left:15.4%"></i><span class="dayline__label" style="left:15.4%">10</span>
+      <i class="dayline__tick" style="left:30.8%"></i><span class="dayline__label" style="left:30.8%">12</span>
+      <i class="dayline__tick" style="left:46.2%"></i><span class="dayline__label" style="left:46.2%">14</span>
+      <i class="dayline__tick" style="left:61.5%"></i><span class="dayline__label" style="left:61.5%">16</span>
+      <i class="dayline__tick" style="left:76.9%"></i><span class="dayline__label" style="left:76.9%">18</span>
+      <i class="dayline__tick" style="left:92.3%"></i><span class="dayline__label" style="left:92.3%">20</span>
+      <button class="dl-item is-done" style="left:29%;width:150px;bottom:40px"><time>12:00</time><span>村田さんに仕様確認</span></button>
+      <button class="dl-item is-next" style="left:44.5%;width:190px;bottom:40px"><time>14:00</time><span>PRレビュー BAPさん</span></button>
+      <button class="dl-item" style="left:62%;width:170px;bottom:74px"><time>16:45</time><span>NG改修レビュー</span></button>
+      <div class="dayline__now" style="left:36%"><b>12:41</b></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2>History</h2>
+    <p class="note">최근 12주의 달성도. 색만으로 구분하지 않도록 각 칸에 날짜와 완료 수를 툴팁/라벨로 제공합니다.</p>
+    <div style="max-width:340px">
+      <ul class="heat" role="img" aria-label="최근 12주 달성도 견본">
+        <li title="견본 0단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="1" title="견본 1단계"></li><li title="견본 0단계"></li><li data-l="1" title="견본 1단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="2" title="견본 2단계"></li><li title="견본 0단계"></li><li title="견본 0단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="1" title="견본 1단계"></li><li title="견본 0단계"></li><li title="견본 0단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="3" title="견본 3단계"></li><li title="견본 0단계"></li><li data-l="1" title="견본 1단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="2" title="견본 2단계"></li><li title="견본 0단계"></li><li data-l="1" title="견본 1단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="4" title="견본 4단계"></li><li title="견본 0단계"></li><li title="견본 0단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="1" title="견본 1단계"></li><li title="견본 0단계"></li><li title="견본 0단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="2" title="견본 2단계"></li><li title="견본 0단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="4" title="견본 4단계"></li><li title="견본 0단계"></li><li data-l="1" title="견본 1단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="1" title="견본 1단계"></li><li title="견본 0단계"></li><li data-l="3" title="견본 3단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="4" title="견본 4단계"></li><li data-l="2" title="견본 2단계"></li><li data-l="3" title="견본 3단계"></li><li title="견본 0단계"></li><li title="견본 0단계"></li><li data-l="3" title="견본 3단계"></li><li class="is-today" data-l="2" title="견본 2단계"></li><li class="is-future"></li><li class="is-future"></li><li class="is-future"></li><li class="is-future"></li><li class="is-future"></li>
+      </ul>
+      <div class="heat-legend"><span>모두 완료한 날이 이어지면 연속 기록</span><span class="heat-legend__scale"><span>적음</span><i></i><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i><span>많음</span></span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Feedback</h2>
+    <div class="row">
+      <div class="toast" style="animation:none">완료했어요 <button>되돌리기</button></div>
+      <div class="toast" style="animation:none">로컬 파일이 먼저 바뀌어 적용하지 못했어요. 최신 상태로 불러왔어요.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Rules</h2>
+    <ul class="rules">
+      <li>보라색 = 지금(now 선) · 완료(체크·진행 바) · 주 동작(버튼) · 포커스. 장식으로 쓰지 않는다.</li>
+      <li>배경은 다크에서는 검정, 라이트에서는 흰색 계열. 무채색 그라데이션 외에 색을 얹지 않는다. 카드는 메인 시트 하나만 띄운다.</li>
+      <li>하이라이트(다크 = 보라, 라이트 = 주황-노랑)는 같은 토큰 이름으로 바뀐다. 컴포넌트는 색을 직접 쓰지 않고 토큰만 참조한다.</li>
+      <li>브라우저 기본 select·날짜·시간 UI는 쓰지 않는다. 입력 부품은 <code>ui.js</code>의 자체 컴포넌트만 쓴다.</li>
+      <li>파괴적 동작은 붉은 채움 버튼 + 확인 모달. 지우지 않고 되돌릴 수 있게 남긴다.</li>
+      <li>글자는 12px 이상, 본문 대비 4.5:1 이상(<code>text-3</code>까지). <code>text-4</code>에는 의미를 싣지 않는다.</li>
+      <li>상태는 색과 글자(“이월 2일”, “기한 10/03”)를 함께 쓴다. 색만으로 구분하지 않는다.</li>
+      <li>움직임은 사용자 동작에 대한 반응(체크의 팝, 취소선이 왼쪽에서 그려지는 560ms, 토스트, 테마 전환)과 첫 로딩 한 번뿐. <code>prefers-reduced-motion</code>이면 끈다.</li>
+      <li>문구는 사용자가 이해하는 말로, 한 동작에 한 이름(완료 → “완료했어요”). 오류는 원인과 해결을 함께 적는다.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

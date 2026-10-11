@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- macOS アプリアイコン: 角丸タイル (824px、余白 100px) の上に、ヘッダーと同じブランドマークをアクセントの紫 (p-600 = #7057d5) で置く。マークの幅がタイルの 75% (618px)、中心はタイルの中心に合わせる。 -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ebe6fb"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feGaussianBlur in="SourceAlpha" stdDeviation="14"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#tile)" filter="url(#shadow)"/>
+  <g fill="#7057d5" transform="translate(512 512) scale(1.622) translate(-255.5 -258)">
+    <path d="M86 105H291C364 105 422 157 422 231C422 275 404 309 354 345L326 317C357 295 372 266 372 231C372 181 340 146 291 146H86C58 146 58 105 86 105Z"/>
+    <path d="M168 164H221V322H301L354 371L426 302L446 323L354 411L301 360H168Z"/>
+  </g>
+</svg>

@@ -1,0 +1,314 @@
+/* デザイントークン。色・余白・角丸・動きはここだけで決め、コンポーネントは var() だけを参照する。 */
+/* 色のトークンは @property で <color> として登録する。テーマ (ダーク / ライト)・背景・ハイライトを切り替えたとき、
+   :root の transition (--theme-ms) が色そのものを補間し、実際の画面の上でなめらかに変わる (View Transition と違い、その間もクリックできる)。
+   増やしたら、ここにも足すこと (test/theme-tokens.test.js が、登録し忘れを見張る)。initial-value はダークの既定。 */
+@property --n-0 { syntax: '<color>'; inherits: true; initial-value: #050506; }
+@property --n-1 { syntax: '<color>'; inherits: true; initial-value: #09090b; }
+@property --n-2 { syntax: '<color>'; inherits: true; initial-value: #0f0f11; }
+@property --n-3 { syntax: '<color>'; inherits: true; initial-value: #161618; }
+@property --n-4 { syntax: '<color>'; inherits: true; initial-value: #1e1e20; }
+@property --n-5 { syntax: '<color>'; inherits: true; initial-value: #27272a; }
+@property --line-1 { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.06); }
+@property --line-2 { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.1); }
+@property --line-3 { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.18); }
+@property --text-1 { syntax: '<color>'; inherits: true; initial-value: #f3f3f6; }
+@property --text-2 { syntax: '<color>'; inherits: true; initial-value: #b1b1b3; }
+@property --text-3 { syntax: '<color>'; inherits: true; initial-value: #868688; }
+@property --text-4 { syntax: '<color>'; inherits: true; initial-value: #555557; }
+@property --p-50 { syntax: '<color>'; inherits: true; initial-value: #f4f4ff; }
+@property --p-100 { syntax: '<color>'; inherits: true; initial-value: #e6e5fb; }
+@property --p-200 { syntax: '<color>'; inherits: true; initial-value: #d2cffa; }
+@property --p-300 { syntax: '<color>'; inherits: true; initial-value: #bab4fb; }
+@property --p-400 { syntax: '<color>'; inherits: true; initial-value: #a193fc; }
+@property --p-500 { syntax: '<color>'; inherits: true; initial-value: #8a75f1; }
+@property --p-550 { syntax: '<color>'; inherits: true; initial-value: #7a62e1; }
+@property --p-600 { syntax: '<color>'; inherits: true; initial-value: #7057d5; }
+@property --p-700 { syntax: '<color>'; inherits: true; initial-value: #5742aa; }
+@property --p-800 { syntax: '<color>'; inherits: true; initial-value: #3f2f7d; }
+@property --p-900 { syntax: '<color>'; inherits: true; initial-value: #2b2155; }
+@property --p-950 { syntax: '<color>'; inherits: true; initial-value: #181232; }
+@property --accent { syntax: '<color>'; inherits: true; initial-value: #7057d5; }
+@property --accent-hover { syntax: '<color>'; inherits: true; initial-value: #7a62e1; }
+@property --accent-press { syntax: '<color>'; inherits: true; initial-value: #5742aa; }
+@property --on-accent { syntax: '<color>'; inherits: true; initial-value: #ffffff; }
+@property --accent-text { syntax: '<color>'; inherits: true; initial-value: #bab4fb; }
+@property --accent-icon { syntax: '<color>'; inherits: true; initial-value: #a193fc; }
+@property --accent-wash { syntax: '<color>'; inherits: true; initial-value: rgb(112 87 213 / 0.14); }
+@property --accent-line { syntax: '<color>'; inherits: true; initial-value: rgb(161 147 252 / 0.34); }
+@property --focus { syntax: '<color>'; inherits: true; initial-value: #a193fc; }
+@property --amber { syntax: '<color>'; inherits: true; initial-value: #e6b55d; }
+@property --coral { syntax: '<color>'; inherits: true; initial-value: #f07f77; }
+@property --carry-bg { syntax: '<color>'; inherits: true; initial-value: rgb(230 181 93 / 0.1); }
+@property --carry-line { syntax: '<color>'; inherits: true; initial-value: rgb(230 181 93 / 0.24); }
+@property --over-bg { syntax: '<color>'; inherits: true; initial-value: rgb(240 127 119 / 0.1); }
+@property --over-line { syntax: '<color>'; inherits: true; initial-value: rgb(240 127 119 / 0.26); }
+@property --top-bg { syntax: '<color>'; inherits: true; initial-value: rgb(9 9 11 / 0.74); }
+@property --backdrop { syntax: '<color>'; inherits: true; initial-value: rgb(0 0 0 / 0.64); }
+@property --glow { syntax: '<color>'; inherits: true; initial-value: rgb(161 147 252 / 0.18); }
+@property --now-glow { syntax: '<color>'; inherits: true; initial-value: rgb(161 147 252 / 0.2); }
+@property --tag { syntax: '<color>'; inherits: true; initial-value: #a193fc; }
+@property --heat-1 { syntax: '<color>'; inherits: true; initial-value: #3f2f7d; }
+@property --heat-2 { syntax: '<color>'; inherits: true; initial-value: #5742aa; }
+@property --heat-3 { syntax: '<color>'; inherits: true; initial-value: #7057d5; }
+@property --heat-4 { syntax: '<color>'; inherits: true; initial-value: #8a75f1; }
+@property --brand-a { syntax: '<color>'; inherits: true; initial-value: #8a75f1; }
+@property --brand-b { syntax: '<color>'; inherits: true; initial-value: #5742aa; }
+@property --brand-ink { syntax: '<color>'; inherits: true; initial-value: #ffffff; }
+@property --sel-bg { syntax: '<color>'; inherits: true; initial-value: #5742aa; }
+@property --sel-fg { syntax: '<color>'; inherits: true; initial-value: #ffffff; }
+@property --pg-hi-a { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.06); }
+@property --pg-hi-b { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.032); }
+@property --pg-top { syntax: '<color>'; inherits: true; initial-value: #0e0e10; }
+@property --pg-mid { syntax: '<color>'; inherits: true; initial-value: #08080a; }
+@property --pg-bot { syntax: '<color>'; inherits: true; initial-value: #050506; }
+@property --sheet-hi-a { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.03); }
+@property --sheet-hi-b { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.008); }
+@property --sheet-edge { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.05); }
+@property --sheet-drop { syntax: '<color>'; inherits: true; initial-value: rgb(0 0 0 / 0.95); }
+@property --pop-ring { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0); }
+@property --pop-edge { syntax: '<color>'; inherits: true; initial-value: rgb(255 255 255 / 0.04); }
+@property --pop-drop { syntax: '<color>'; inherits: true; initial-value: rgb(0 0 0 / 0.7); }
+@property --dialog-drop { syntax: '<color>'; inherits: true; initial-value: rgb(0 0 0 / 0.75); }
+@property --toast-drop { syntax: '<color>'; inherits: true; initial-value: rgb(0 0 0 / 0.65); }
+
+/* .pv = 設定ページのプレビュー用。同じトークンをその要素の中だけに当てる (data-theme / data-bg / data-accent を付けた要素) */
+:root,
+.pv[data-theme='dark'] {
+  color-scheme: dark;
+  transition: --n-0 var(--theme-ms, 0ms) ease, --n-1 var(--theme-ms, 0ms) ease, --n-2 var(--theme-ms, 0ms) ease, --n-3 var(--theme-ms, 0ms) ease, --n-4 var(--theme-ms, 0ms) ease, --n-5 var(--theme-ms, 0ms) ease, --line-1 var(--theme-ms, 0ms) ease, --line-2 var(--theme-ms, 0ms) ease, --line-3 var(--theme-ms, 0ms) ease, --text-1 var(--theme-ms, 0ms) ease, --text-2 var(--theme-ms, 0ms) ease, --text-3 var(--theme-ms, 0ms) ease, --text-4 var(--theme-ms, 0ms) ease, --p-50 var(--theme-ms, 0ms) ease, --p-100 var(--theme-ms, 0ms) ease, --p-200 var(--theme-ms, 0ms) ease, --p-300 var(--theme-ms, 0ms) ease, --p-400 var(--theme-ms, 0ms) ease, --p-500 var(--theme-ms, 0ms) ease, --p-550 var(--theme-ms, 0ms) ease, --p-600 var(--theme-ms, 0ms) ease, --p-700 var(--theme-ms, 0ms) ease, --p-800 var(--theme-ms, 0ms) ease, --p-900 var(--theme-ms, 0ms) ease, --p-950 var(--theme-ms, 0ms) ease, --accent var(--theme-ms, 0ms) ease, --accent-hover var(--theme-ms, 0ms) ease, --accent-press var(--theme-ms, 0ms) ease, --on-accent var(--theme-ms, 0ms) ease, --accent-text var(--theme-ms, 0ms) ease, --accent-icon var(--theme-ms, 0ms) ease, --accent-wash var(--theme-ms, 0ms) ease, --accent-line var(--theme-ms, 0ms) ease, --focus var(--theme-ms, 0ms) ease, --amber var(--theme-ms, 0ms) ease, --coral var(--theme-ms, 0ms) ease, --carry-bg var(--theme-ms, 0ms) ease, --carry-line var(--theme-ms, 0ms) ease, --over-bg var(--theme-ms, 0ms) ease, --over-line var(--theme-ms, 0ms) ease, --top-bg var(--theme-ms, 0ms) ease, --backdrop var(--theme-ms, 0ms) ease, --glow var(--theme-ms, 0ms) ease, --now-glow var(--theme-ms, 0ms) ease, --tag var(--theme-ms, 0ms) ease, --heat-1 var(--theme-ms, 0ms) ease, --heat-2 var(--theme-ms, 0ms) ease, --heat-3 var(--theme-ms, 0ms) ease, --heat-4 var(--theme-ms, 0ms) ease, --brand-a var(--theme-ms, 0ms) ease, --brand-b var(--theme-ms, 0ms) ease, --brand-ink var(--theme-ms, 0ms) ease, --sel-bg var(--theme-ms, 0ms) ease, --sel-fg var(--theme-ms, 0ms) ease, --pg-hi-a var(--theme-ms, 0ms) ease, --pg-hi-b var(--theme-ms, 0ms) ease, --pg-top var(--theme-ms, 0ms) ease, --pg-mid var(--theme-ms, 0ms) ease, --pg-bot var(--theme-ms, 0ms) ease, --sheet-hi-a var(--theme-ms, 0ms) ease, --sheet-hi-b var(--theme-ms, 0ms) ease, --sheet-edge var(--theme-ms, 0ms) ease, --sheet-drop var(--theme-ms, 0ms) ease, --pop-ring var(--theme-ms, 0ms) ease, --pop-edge var(--theme-ms, 0ms) ease, --pop-drop var(--theme-ms, 0ms) ease, --dialog-drop var(--theme-ms, 0ms) ease, --toast-drop var(--theme-ms, 0ms) ease; /* --theme-ms は theme.js が切り替えの間だけ付ける (ふだんは 0) */
+
+  /* Neutral: ほぼ無彩色。背景は黒を主役にし、色味は載せない */
+  --n-0: #050506;
+  --n-1: #09090b; /* page */
+  --n-2: #0f0f11; /* sheet / dialog */
+  --n-3: #161618; /* hover / input / button */
+  --n-4: #1e1e20; /* chip / pressed */
+  --n-5: #27272a; /* track / empty cell */
+
+  --line-1: rgb(255 255 255 / 0.06);
+  --line-2: rgb(255 255 255 / 0.1);
+  --line-3: rgb(255 255 255 / 0.18);
+
+  --text-1: #f3f3f6; /* 17.3:1 on n-2 */
+  --text-2: #b1b1b3; /* 8.9:1 */
+  --text-3: #868688; /* 5.3:1 (本文に使える最小) */
+  --text-4: #555557; /* 装飾・無効のみ。意味を載せない */
+
+  /* Business purple: OKLCH hue 288, 彩度は控えめ。ハイライト専用 */
+  --p-50: #f4f4ff;
+  --p-100: #e6e5fb;
+  --p-200: #d2cffa;
+  --p-300: #bab4fb; /* 10.0:1 on n-2  アクセント文字 */
+  --p-400: #a193fc; /* 7.4:1          アイコン・フォーカス・now */
+  --p-500: #8a75f1;
+  --p-550: #7a62e1; /* 白文字 4.5:1   hover */
+  --p-600: #7057d5; /* 白文字 5.2:1   塗り (ボタン・チェック) */
+  --p-700: #5742aa;
+  --p-800: #3f2f7d;
+  --p-900: #2b2155;
+  --p-950: #181232;
+
+  --edit: oklch(from var(--accent) l c calc(h + 180)); /* アクセントの補色（編集ボタン） */
+  --on-edit: oklch(from var(--edit) clamp(0, (0.65 - l) * 1000, 1) 0 0);
+  --accent: var(--p-600);
+  --accent-hover: var(--p-550);
+  --accent-press: var(--p-700);
+  --on-accent: #ffffff;
+  --accent-text: var(--p-300);
+  --accent-icon: var(--p-400);
+  --accent-wash: rgb(112 87 213 / 0.14);
+  --accent-line: rgb(161 147 252 / 0.34);
+  --focus: var(--p-400);
+
+  /* 破壊的な操作 (キャンセル・削除) の塗り。白文字 5.1:1 */
+  --danger: #c4403b;
+  --danger-hover: #cb4641; /* 白文字 4.7:1 */
+  --danger-press: #ac312e;
+  --on-danger: #ffffff;
+
+  /* カレンダーの土曜 (青) と日曜・休日 (赤)。ポップオーバー地の上で 4.5:1 以上 */
+  --cal-sat: #7aa8ff;
+  --cal-sun: #ff8a80;
+
+  /* 状態色は2つだけ。紫と競合しないよう彩度を落としている */
+  --amber: #e6b55d; /* 持ち越し */
+  --coral: #f07f77; /* 期限超過・取り消し */
+  --carry-bg: rgb(230 181 93 / 0.1);
+  --carry-line: rgb(230 181 93 / 0.24);
+  --over-bg: rgb(240 127 119 / 0.1);
+  --over-line: rgb(240 127 119 / 0.26);
+
+  /* テーマで入れ替わる値 (コンポーネントは直接の色ではなく、これらを参照する) */
+  /* 形はテーマ共通。変わるのは、そこに差す色 (pg-* / sheet-* / *-drop など) だけ → 色の補間でなめらかに切り替わる */
+  --pg-hi-a: rgb(255 255 255 / 0.06);
+  --pg-hi-b: rgb(255 255 255 / 0.032);
+  --pg-top: #0e0e10;
+  --pg-mid: #08080a;
+  --pg-bot: #050506;
+  --top-bg: rgb(9 9 11 / 0.74);
+  --sheet-hi-a: rgb(255 255 255 / 0.03);
+  --sheet-hi-b: rgb(255 255 255 / 0.008);
+  --sheet-edge: rgb(255 255 255 / 0.05);
+  --sheet-drop: rgb(0 0 0 / 0.95);
+  --pop-ring: rgb(255 255 255 / 0);
+  --pop-edge: rgb(255 255 255 / 0.04);
+  --pop-drop: rgb(0 0 0 / 0.7);
+  --dialog-drop: rgb(0 0 0 / 0.75);
+  --toast-drop: rgb(0 0 0 / 0.65);
+  --backdrop: rgb(0 0 0 / 0.64);
+  --glow: rgb(161 147 252 / 0.18); /* 状態ドットの光 */
+  --now-glow: rgb(161 147 252 / 0.2);
+  --tag: var(--p-400);
+  --strike: var(--text-3); /* 完了の取り消し線 */
+  --heat-1: var(--p-800);
+  --heat-2: var(--p-700);
+  --heat-3: var(--p-600);
+  --heat-4: var(--p-500);
+  --brand-a: #8a75f1;
+  --brand-b: #5742aa;
+  --brand-ink: #ffffff;
+  --sel-bg: var(--p-700);
+  --sel-fg: #ffffff;
+
+  /* Type: macOS のシステム書体 (SF Pro + ヒラギノ + Apple SD Gothic Neo)。ダウンロード不要 */
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Apple SD Gothic Neo', 'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 20px;
+  --fs-2xl: 28px;
+  --fs-hero: clamp(38px, 4.6vw, 60px);
+
+  /* Space: 4px グリッド */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+
+  /* Radius: 役割ごとに変える (全部同じ角丸にしない) */
+  --r-sm: 6px; /* チェック・小ボタン */
+  --r-md: 10px; /* 入力・行・ボタン */
+  --r-lg: 18px; /* メインのシート・ダイアログ */
+  --r-pill: 999px;
+
+  --chk-size: 18px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 120ms;
+  --t-med: 220ms;
+  --t-slow: 700ms;
+  --t-strike: 560ms; /* 完了の取り消し線が左から引かれる時間 (app.js の再描画の保留時間より短く) */
+  --ease-draw: cubic-bezier(0.5, 0, 0.2, 1); /* 出だしは静かに、中ほどで走り、最後はすっと止まる */
+}
+
+/* 形 (テーマ共通)。色の変数を組み合わせるだけなので、ライトの .pv にもその要素の色で組み直される (継承では、親の色のまま固まってしまう) */
+:root,
+.pv {
+  --page-bg:
+    radial-gradient(1200px 560px at 12% -12%, var(--pg-hi-a), transparent 62%),
+    radial-gradient(900px 520px at 108% 2%, var(--pg-hi-b), transparent 64%),
+    linear-gradient(180deg, var(--pg-top) 0%, var(--pg-mid) 48%, var(--pg-bot) 100%);
+  --sheet-bg: linear-gradient(180deg, var(--sheet-hi-a), var(--sheet-hi-b)), var(--n-2);
+  --pop-shadow: 0 0 0 1px var(--pop-ring), inset 0 1px 0 var(--pop-edge), 0 22px 54px -10px var(--pop-drop);
+  --dialog-shadow: 0 34px 84px -12px var(--dialog-drop);
+  --toast-shadow: 0 16px 40px -6px var(--toast-drop);
+  --sheet-shadow: 0 0 0 1px var(--line-1), inset 0 1px 0 var(--sheet-edge), 0 26px 52px -27px var(--sheet-drop);
+}
+
+/* 言語ごとの書体: 漢字の字形がその言語向けになるよう、先頭に置く CJK フォントを切り替える */
+:root:lang(zh) {
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', system-ui, sans-serif;
+}
+:root:lang(ko) {
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Hiragino Sans', system-ui, sans-serif;
+}
+
+/* Light: 白系の背景 + 橙〜黄のハイライト。意味づけはダークと同じ (now・完了・主操作・フォーカスだけが色を持つ) */
+:root[data-theme='light'],
+.pv[data-theme='light'] {
+  color-scheme: light;
+
+  --cal-sat: #2459b8;
+  --cal-sun: #c0392f;
+
+  --n-0: #ffffff;
+  --n-1: #f6f6f7; /* page */
+  --n-2: #ffffff; /* sheet / dialog */
+  --n-3: #f1f1f3; /* hover / input / button */
+  --n-4: #eaeaee; /* chip / pressed */
+  --n-5: #dfdfe4; /* track / empty cell */
+
+  --line-1: rgb(0 0 0 / 0.07);
+  --line-2: rgb(0 0 0 / 0.11);
+  --line-3: rgb(0 0 0 / 0.19);
+
+  --text-1: #131416; /* 18.4:1 on white */
+  --text-2: #525255; /* 7.8:1 */
+  --text-3: #6e6e71; /* 5.1:1 (本文に使える最小) */
+  --text-4: #a4a4a7; /* 装飾・無効のみ */
+
+  /* Amber-orange ramp: OKLCH hue 48–90。塗りは p-500、文字は p-700 より濃い橙 */
+  --p-50: #fffaeb;
+  --p-100: #fff1cc;
+  --p-200: #ffe29c;
+  --p-300: #ffcd62;
+  --p-400: #ffb629;
+  --p-500: #fb9d00; /* 塗り: 濃い茶の文字 8.1:1 */
+  --p-550: #f28d00;
+  --p-600: #e87a00;
+  --p-700: #ba5702;
+  --p-800: #8a3f15;
+  --p-900: #632f15;
+  --p-950: #3c1d0e;
+
+  --accent: var(--p-500);
+  --accent-hover: var(--p-400); /* 濃い茶の文字 9.8:1 */
+  --accent-press: var(--p-600); /* 5.9:1 */
+  --on-accent: #2a1700;
+  --accent-text: #b44f00; /* 白 5.2:1 / page 4.8:1 */
+  --accent-icon: #d86800; /* 白 3.6:1: アイコン・now・フォーカスに使える濃さ */
+  --accent-wash: rgb(251 157 0 / 0.14);
+  --accent-line: rgb(216 104 0 / 0.42);
+  --focus: #bc4f00;
+
+  --amber: #7e5d1d; /* 持ち越し (白 6.0:1) */
+  --coral: #c13c3b; /* 期限超過 (白 5.3:1) */
+  --carry-bg: rgb(160 110 20 / 0.1);
+  --carry-line: rgb(160 110 20 / 0.28);
+  --over-bg: rgb(193 60 59 / 0.08);
+  --over-line: rgb(193 60 59 / 0.28);
+
+  --pg-hi-a: rgb(255 255 255 / 0.95);
+  --pg-hi-b: rgb(0 0 0 / 0.028);
+  --pg-top: #f9f9fa;
+  --pg-mid: #f3f3f5;
+  --pg-bot: #eeeef1;
+  --top-bg: rgb(247 247 248 / 0.8);
+  --sheet-hi-a: rgb(255 255 255 / 0);
+  --sheet-hi-b: rgb(255 255 255 / 0);
+  --sheet-edge: rgb(255 255 255 / 0.9);
+  --sheet-drop: rgb(30 30 50 / 0.35);
+  --pop-ring: rgb(0 0 0 / 0.04);
+  --pop-edge: rgb(255 255 255 / 0);
+  --pop-drop: rgb(20 20 40 / 0.3);
+  --dialog-drop: rgb(20 20 40 / 0.4);
+  --toast-drop: rgb(20 20 40 / 0.32);
+  --backdrop: rgb(30 30 40 / 0.36);
+  --glow: rgb(216 104 0 / 0.2);
+  --now-glow: rgb(216 104 0 / 0.22);
+  --tag: #b44f00;
+  --strike: var(--text-3);
+  --heat-1: var(--p-200);
+  --heat-2: var(--p-400);
+  --heat-3: var(--p-500);
+  --heat-4: var(--p-600);
+  --brand-a: #ffb629;
+  --brand-b: #e87a00;
+  --brand-ink: #2a1700;
+  --sel-bg: #ffd77a;
+  --sel-fg: #2a1700;
+}
